@@ -4,15 +4,18 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
-html {
+html,
+body {
     color: #555;
     font-family: 'Lato', 'Arial', sans-serif;
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
 }
 
 
@@ -23,6 +26,19 @@ html {
     max-width: 1140px;
     margin: 0 auto;
 }
+
+.cols {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+}
+
+.col-25 { width: 25%; }
+.col-33 { width: 33%; }
+.col-50 { width: 50%; }
+.col-66 { width: 66%; }
 
 section {
     padding: 80px 0;
@@ -115,6 +131,7 @@ a:visited {
 
     padding-bottom: 1px;
     border-bottom: 1px solid #e67e22;
+    -webkit-transition: border-bottom 0.2s, color 0.2s;
     transition: border-bottom 0.2s, color 0.2s;
 }
 
@@ -135,6 +152,8 @@ input[type=submit] {
     font-weight: 300;
     text-decoration: none;
     border-radius: 200px;
+
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
 
     transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
@@ -178,6 +197,7 @@ input[type=submit] {
 /* HEADER */
 /* ------------------------------- */
 header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("img/hero.jpg");
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/hero.jpg");
     background-size: cover;
     background-position: center;
@@ -195,7 +215,8 @@ header {
 
     /* to centering percentage width/height elements 
        there is 50% of element's wide/height */
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 }
 
 .logo {
@@ -223,7 +244,8 @@ header {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 90%;
-    border-bottom: 2px solid transparent; 
+    border: 2px solid transparent; 
+    -webkit-transition: border-bottom 0.2s; 
     transition: border-bottom 0.2s;
 }
 
@@ -236,13 +258,7 @@ header {
 /* FEAUTERS */
 /* ------------------------------- */
 .features {
-    display: flex;
-    flex-wrap: nowrap;
     margin-top: 30px;
-}
-
-.feature {
-    width: 25%;
 }
 
 .section-features .long-copy {
@@ -253,8 +269,11 @@ header {
 /* MEALS */
 /* ------------------------------- */
 .section-meals {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     padding: 0;
 }
 
@@ -268,13 +287,19 @@ header {
     width: 100%;
     height: auto;
 
-    transform: scale(1.15);
-    transition: transform 1s, opacity 1s;;
+    -webkit-transform: scale(1.15);
+
+            transform: scale(1.15);
+    -webkit-transition: opacity 1s, -webkit-transform 1s;
+    transition: opacity 1s, -webkit-transform 1s;
+    transition: transform 1s, opacity 1s;
+    transition: transform 1s, opacity 1s, -webkit-transform 1s;;
     opacity: 0.7;
 }
 
 .meal-photo img:hover {
-    transform: scale(1.04);
+    -webkit-transform: scale(1.04);
+            transform: scale(1.04);
     opacity: 1;
 }
 
@@ -287,12 +312,9 @@ header {
 
 .section-steps-cols {
     margin-top: 60px;
-    display: flex;
-    flex-wrap: nowrap;
 }
 
 .app-screen {
-    width: 50%;
     text-align: right;
     padding-right: 3%; 
 }
@@ -302,15 +324,17 @@ header {
 }
 
 .steps {
-    width: 50%;
     padding-left: 3%; 
     padding-top: 40px;
 }
 
 .step {
     margin-bottom: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
 }
 
 .step div {
@@ -349,13 +373,12 @@ header {
 /* CITIES */
 /* ------------------------------- */
 .cities {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
 }
 
 .city {
-    width: 25%;
     margin-right: 30px;
 }
 
@@ -373,6 +396,7 @@ header {
 /* CUSTOMERS */
 /* ------------------------------- */
 .section-reviews {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url("img/back-customers.jpg");
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("img/back-customers.jpg");
     background-size: cover;
 
@@ -380,13 +404,7 @@ header {
     color: #fff;
 }
 
-.reviews {
-    display: flex;
-    flex-wrap: nowrap;
-}
-
 .review {
-    width: 33%;
     margin-right: 30px;
 }
 
@@ -431,16 +449,16 @@ header {
 }
 
 .plans {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 
 .plan {
     margin: 2%;
-    width: 33%;
     border-radius: 5px;
-    box-shadow: 0 2px 2px #efefef;
+    -webkit-box-shadow: 0 2px 2px #efefef;
+            box-shadow: 0 2px 2px #efefef;
     background-color: white;
     overflow: hidden;
 }
@@ -494,20 +512,9 @@ header {
 
 .form-information {
     margin: 0 auto;
-    width: 60%;
-
     padding: 10px;
-    display: flex;
-    flex-wrap: nowrap;
 }
 
-.form-information label {
-    width: 33%;
-}
-
-.info  {
-    width: 66%;
-}
 
 input[type=text],
 input[type=email],
@@ -544,12 +551,9 @@ footer {
 
 .footer-nav {
     padding: 40px;
-    display: flex;
-    flex-wrap: nowrap;
 }
 
 .footer-menu {
-    width: 50%;
     list-style: none;
 }
 
@@ -560,6 +564,7 @@ footer {
     font-weight: 100;
     text-decoration: none;
     border: none;
+    -webkit-transition: color 0.2s;
     transition: color 0.2s;
 }
 
@@ -577,6 +582,7 @@ footer {
 .ion-social-twitter,
 .ion-social-googleplus,
 .ion-social-instagram {
+    -webkit-transition: color 0.2s;
     transition: color 0.2s;
     font-size: 90%;
 }
@@ -599,7 +605,6 @@ footer {
 }
 
 .social-links {
-    width: 50%;
     text-align: right;
     list-style: none;
 }
