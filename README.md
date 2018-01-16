@@ -8,3 +8,4 @@
 ## Topics covered
 - HTML5
 - CSS3
+- Responsive web design (media queries; flexbox)
