@@ -16,6 +16,7 @@
     <!-- respond.js - polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more) -->
     <link href="http://externalcdn.com/respond-proxy.html" id="respond-proxy" rel="respond-proxy" />
     <link href="/path/to/respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
+    <link href="vendors/css/animate.css" rel="stylesheet">
 
 </head>
 
@@ -24,31 +25,33 @@
         <nav>
             <div class="row">
                 <img src="resources/img/logo-white.png" alt="Omnifood logo" class="logo">
-                <ul class="main-nav">
+                <img src="resources/img/logo.png" alt="Omnifood logo" class="logo-black">
+                <ul class="main-nav js--main-nav">
                     <li>
-                        <a href="#">Food delivery</a>
+                        <a href="#feautures">Food delivery</a>
                     </li>
                     <li>
-                        <a href="#">How it works</a>
+                        <a href="#works">How it works</a>
                     </li>
                     <li>
-                        <a href="#">Our cities</a>
+                        <a href="#cities">Our cities</a>
                     </li>
                     <li>
-                        <a href="#">Sign up</a>
+                        <a href="#plans">Sign up</a>
                     </li>
                 </ul>
+                <a class="mobile-nav-icon js--nav-icon"><i class="ion-navicon-round"></i></a>
             </div>
         </nav>
         <div class="hero-text-box">
             <h1>Goodbye junk food.
                 <br>Hello super healthy meals.</h1>
-            <a class="btn btn-full" href="#">I’m hungry</a>
-            <a class="btn btn-ghost" href="#">Show me more</a>
+            <a class="btn btn-full js--scroll-to-plan" href="#">I’m hungry</a>
+            <a class="btn btn-ghost js--scroll-to-start" href="#">Show me more</a>
         </div>
     </header>
 
-    <section class="section-features">
+    <section class="section-features js--section-feautures" id="feautures">
         <div class="row">
             <!-- <i class=""></i> -->
             <h2>Get food fast &mdash; not fast food.</h2>
@@ -58,7 +61,7 @@
             </p>
         </div>
 
-        <div class="row features cols">
+        <div class="row features cols js--wp-1">
             <div class="feature box col-25">
                 <i class="ion-ios-infinite-outline icon-big"></i>
                 <h3>Up to 365 days/year</h3>
@@ -120,13 +123,13 @@
         </figure>
     </section>
 
-    <section class="section-steps">
+    <section class="section-steps" id="works">
         <div class="row">
             <h2>How it works &mdash; Simple as 1, 2, 3</h2>
         </div>
         <div class="row section-steps-cols cols">
             <div class="app-screen col-50">
-                <img src="resources/img/app-iPhone.png" alt="Omnifood app on iPhone">
+                <img src="resources/img/app-iPhone.png" alt="Omnifood app on iPhone" class="js--wp-2">
             </div>
             <div class="steps col-50">
                 <div class="step">
@@ -158,11 +161,11 @@
         </div>
     </section>
 
-    <section class="section-cities">
+    <section class="section-cities" id="cities">
         <div class="row">
             <h2>We're currently in these cities</h2>
         </div>
-        <div class="row">
+        <div class="row js--wp-3">
             <div class="cities cols">
                 <div class="city col-25">
                     <img src="resources/img/lisbon-3.jpg" alt="Lisbon">
@@ -261,13 +264,13 @@
         </div>
     </section>
 
-    <section class="section-sign-up">
+    <section class="section-sign-up js--section-plans"  id="plans">
         <div class="row">
             <h2>Start eating healthy today</h2>
         </div>
         <div class="row">
             <div class="plans cols">
-                <div class="plan col-33">
+                <div class="plan col-33 js--wp-4">
                     <div>
                         <h3>Premium</h3>
                         <p class="plan-price">$399
@@ -432,8 +435,10 @@
         </div>
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="resources/js/script.js"></script>
     <!-- respond.js - polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more) -->
-    <script src="/path/to/respond.proxy.js"></script>
+    <script src="node_modules/waypoints/lib/jquery.waypoints.min.js"></script>
 </body>
 
 </html>
