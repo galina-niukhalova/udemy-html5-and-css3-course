@@ -9,4 +9,4 @@
 - HTML5
 - CSS3
 - Responsive web design (media queries; flexbox)
-- JQuery (plagin Waypoints)
+- JQuery (plagins: Waypoints, Gmaps)
