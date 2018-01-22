@@ -108,19 +108,39 @@ $(document).ready(function () {
     $('.js--nav-icon').click(function () {
         var nav = $('.js--main-nav');
         var icon = $('.js--nav-icon i');
-        
+
         // open/close box
         nav.slideToggle(200);
 
-        if(icon.hasClass('ion-navicon-round')) {
+        if (icon.hasClass('ion-navicon-round')) {
             icon.addClass('ion-close-round');
             icon.removeClass('ion-navicon-round');
         }
         else {
-            icon.addClass('ion-navicon-round'); 
+            icon.addClass('ion-navicon-round');
             icon.removeClass('ion-close-round');
         }
     });
 
+    /* ------------------------------- */
+    /*  Map  */
+    /* ------------------------------- */
+
+    var map = new GMaps({
+        div: '.map',
+        lat: 13.7251088,
+        lng: 100.95,
+        zoom: 10
+    });
+
+    map.addMarker({
+        lat: 13.7085909,
+        lng: 100.5775987,
+        title: 'Home',
+        infoWindow: {
+            content: '<p>My home</p>'
+          }
+      });
 });
+
 
