@@ -9,4 +9,6 @@
 - HTML5
 - CSS3
 - Responsive web design (media queries; flexbox)
-- JQuery (plagin Waypoints)
+- JQuery (plagins: Waypoints, Gmaps)
+
+![certificate](https://github.com/galina-niukhalova/udemy-html5-and-css3-course/blob/master/Udemy%20certificate.jpg)
