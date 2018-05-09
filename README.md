@@ -3,7 +3,8 @@
 **Course's author:** [Jonas Schmedtmann](https://www.facebook.com/jschmedtmann)
 
 ## Links
-- https://www.udemy.com/design-and-develop-a-killer-website-with-html5-and-css3/learn/v4/content
+- [Course's webpage](https://www.udemy.com/design-and-develop-a-killer-website-with-html5-and-css3/learn/v4/content)
+- [Demo](https://galina-niukhalova.github.io/udemy-html5-and-css3-course/#)
 
 ## Topics covered
 - HTML5
